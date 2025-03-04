@@ -1,0 +1,47 @@
+name: taskmaster
+description: "A new Flutter project."
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.1.1+1
+  font_awesome_flutter: ^10.4.0
+  google_fonts: ^4.0.4
+  lottie: ^2.7.0
+  animated_text_kit: ^4.2.2
+  firebase_core: ^3.12.1
+  firebase_database: ^11.3.4
+  firebase_storage: ^12.4.4
+  firebase_auth: ^5.5.1
+  image_picker: ^0.8.4+8
+  uuid: ^4.3.0
+  cached_network_image: ^3.2.0
+  intl: ^0.18.0
+
+
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/images/logo.png
+    - assets/json/loading.json
+    - assets/json/l.json
+
+  uses-material-design: true
+
+
