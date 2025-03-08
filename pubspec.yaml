@@ -23,6 +23,14 @@ dependencies:
   uuid: ^4.3.0
   cached_network_image: ^3.2.0
   intl: ^0.18.0
+  carousel_slider: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+  http: ^0.13.3
+  provider: ^6.0.0
+  animate_do: ^3.0.2
+  speech_to_text: ^6.3.0
+  url_launcher: ^6.3.1
+
 
 
 
@@ -36,11 +44,19 @@ dev_dependencies:
 
   flutter_lints: ^5.0.0
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+
+
 flutter:
   assets:
     - assets/images/logo.png
     - assets/json/loading.json
     - assets/json/l.json
+    - assets/icon/icon.png
+    - assets/images/whatsapp.png
 
   uses-material-design: true
 

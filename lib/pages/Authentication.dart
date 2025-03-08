@@ -34,6 +34,26 @@ class _AuthenticationState extends State<Authentication> {
   final DatabaseReference _database = FirebaseDatabase.instance.ref();
 
   @override
+  void initState() {
+    super.initState();
+    _checkUserLoggedIn();
+  }
+
+  Future<void> _checkUserLoggedIn() async {
+    final User? user = _auth.currentUser;
+    if (user != null) {
+      final DatabaseEvent event = await _database.child('users/${user.uid}').once();
+      final DataSnapshot snapshot = event.snapshot;
+      final Map<dynamic, dynamic>? userData = snapshot.value as Map<dynamic, dynamic>?;
+
+      if (userData != null) {
+        final String userType = userData['userType'];
+        _redirectBasedOnUserType(userType);
+      }
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
 
@@ -111,7 +131,6 @@ class _AuthenticationState extends State<Authentication> {
           if (_isSubmitting)
             Container(
               color: Colors.black54,
-
             ),
         ],
       ),

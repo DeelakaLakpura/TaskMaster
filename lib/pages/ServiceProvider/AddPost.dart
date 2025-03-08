@@ -26,7 +26,7 @@ class _AddPostState extends State<AddPost> {
   final List<String> _serviceTypes = [
     'Cleaning service',
     'Repairing service',
-    'Painting',
+    'Painting service',
   ];
 
   final FirebaseStorage _storage = FirebaseStorage.instance;
